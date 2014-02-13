@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="{{ DEFAULT_LANG }}">
+<head>
+		{% block head %}
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+		<meta name="description" content="IT engineering student, tecnology lover, wannabe designer">
+		<link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/main.css" />
+		<script src="{{ SITEURL }}/theme/scripts/lazy-retina.min.js"></script>
+		<script src="{{ SITEURL }}/them/scripts/modernizr.js"></script>
+		<link rel="alternate" type="application/atom+xml"
+			title="{{ SITENAME }} — Atom Feed"
+			href="{{ SITEURL }}/{{ FEED }}" /> 
+		{% if FEED_RSS %}
+		<link rel ="alternate" type="application/rss+xml"
+			title="{{ SITENAME }} — RSS Feed"
+			href="{{ SITEURL }}/{{ FEED_RSS }}" /> 
+		{% endif %}
+		{% endblock head %}
+</head>
+
+<body>
+<div class="wrapper">
+	<section>
+		{% block content %}
+		{% endblock %}
+	</section>
+	
+	<aside>
+		<header>
+		<img id="logo" alt="logo" onload="lzld(this)" onerror="lzld(this)" src="{{ SITEURL }}/theme/images/logo.png"/>
+		<div id="author-info">
+		<h2>weblog</h2>
+		<p>{{ AUTHOR_SHORT_DESCRIPTION }}</p>
+		</div>
+		<ul>
+		{% for page in PAGES %}
+			<li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+		{% endfor %}
+		</ul>
+		<hr />
+		</header>
+	</aside>
+	
+	<footer>
+		<div class="divider">
+		<hr class="left"/><strong>❤</strong><hr class="right" />
+		</div>
+		<ul>
+		{% for c in COPYRIGHT %}
+			<li>{{ c.notice }}</li>
+		{% endfor %}
+		</ul>
+	</footer>
+</div>
+</body>
+</html>

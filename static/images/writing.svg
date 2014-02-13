@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="83px" height="96px" xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <title>Slice 1</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs>
+        <linearGradient id="gradient-1" x1="50%" y1="0%" x2="50%" y2="100%">
+            <stop offset="0%" style="stop-color:rgb(255,255,255); stop-opacity:100"></stop>
+            <stop offset="100%" style="stop-color:rgb(0,0,0); stop-opacity:100"></stop>
+        </linearGradient>
+        <linearGradient id="gradient-2" x1="50%" y1="0%" x2="50%" y2="100%">
+            <stop offset="0%" style="stop-color:rgb(255,255,255); stop-opacity:100"></stop>
+            <stop offset="100%" style="stop-color:rgb(0,0,0); stop-opacity:100"></stop>
+        </linearGradient>
+        <linearGradient id="gradient-3" x1="50%" y1="0%" x2="50%" y2="100%">
+            <stop offset="0%" style="stop-color:rgb(255,255,255); stop-opacity:100"></stop>
+            <stop offset="100%" style="stop-color:rgb(0,0,0); stop-opacity:100"></stop>
+        </linearGradient>
+        <linearGradient id="gradient-4" x1="50%" y1="0%" x2="50%" y2="100%">
+            <stop offset="0%" style="stop-color:rgb(255,255,255); stop-opacity:100"></stop>
+            <stop offset="100%" style="stop-color:rgb(0,0,0); stop-opacity:100"></stop>
+        </linearGradient>
+        <linearGradient id="gradient-5" x1="50%" y1="0%" x2="50%" y2="100%">
+            <stop offset="0%" style="stop-color:rgb(255,255,255); stop-opacity:100"></stop>
+            <stop offset="100%" style="stop-color:rgb(0,0,0); stop-opacity:100"></stop>
+        </linearGradient>
+    </defs>
+    <g fill="rgb(215,215,215)" id="Page 1">
+        <g fill="rgb(45,45,45)" id="Shape"></g>
+        <path id="Shape" d="M48,41 L23,76 C23,76 25,75 27,75 C29,74 31,74 31,74 L52,44 L48,41 M57,37 L53,33 L49,38 L53,42 L57,37 M63,41 L58,46 L54,43 L36,75 C36,75 18,75 7,86 C7,87 7,87 7,87 C6,88 5,89 3,88 L23,65 C24,65 26,65 27,64 C28,63 28,61 27,60 C25,59 23,59 22,60 C21,61 21,63 22,64 L3,87 C2,86 2,85 3,84 C3,84 3,83 4,83 C13,71 10,53 10,53 L38,30 L34,26 L38,21 L40,23 L55,1 L71,14 L55,32 L59,35 L75,18 L80,21 L61,40 L63,41" fill="rgb(45,45,45)"></path>
+        <path id="Shape decoration" d="" fill="rgb(45,45,45)"></path>
+    </g>
+</svg>
