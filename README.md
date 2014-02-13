@@ -4,12 +4,28 @@ A very simple, light and fully responsive theme for Pelican written in HTML5 and
 
 #Screenshots
 
-![Homepage](screenshots/1 - homepage.jpg "Homepage")
-![Post - top](screenshots/2 - post-top.jpg "Post - top")
-![Post - image](screenshots/3 - post-image.jpg "Post - image")
-![Post - comments](screenshots/4 - post-comments.jpg "Post - comments")
-![Tagged Posts](screenshots/5 - tagged-posts.jpg "Tagged Posts")
-![Post Categories](screenshots/6 - post-categories.jpg "Post Categories")
+- Homepage
+![Homepage](screenshots/1 - homepage.png "Homepage")
+
+
+- Post - top
+![Post - top](screenshots/2 - post-top.png "Post - top")
+
+
+- Post - image
+![Post - image](screenshots/3 - post-image.png "Post - image")
+
+
+- Post - comments
+![Post - comments](screenshots/4 - post-comments.png "Post - comments")
+
+
+- Tagged posts
+![Tagged Posts](screenshots/5 - tagged-posts.png "Tagged Posts")
+
+
+- Post categories
+![Post Categories](screenshots/6 - post-categories.png "Post Categories")
 
 # Contact
 
