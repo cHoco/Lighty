@@ -5,22 +5,23 @@
 	<section class="info-post-home">
 		<div class="post-category-image">
 		<a href="{{ SITEURL }}/{{ article.category.url }}">
-		<img src="{{ SITEURL }}/theme/images/{% if article.category == 'writing' %}writing.svg{% endif %}{% if article.category == 'design' %}design{% endif %}{% if article.category == 'coding' %}coding.svg{% endif %}" alt="{{ article.category }}" />
+		<img src="{{ SITEURL }}/theme/images/{% if article.category == 'writing' %}writing.svg{% endif %}{% if article.category == 'design' %}design.svg{% endif %}{% if article.category == 'coding' %}coding.svg{% endif %}" alt="{{ article.category }}" />
 		</a>
 		</div>
 		<div class="post-content-home">
 		<a href="{{ SITEURL }}/{{ article.url }}"><h1 class="post-title-home">{{ article.title }}</h1></a>
 		<div class="post-date-home">{{ article.locale_date }}</div>
-		<div class="post-category-text">{{ article.category }}</div>
+		<div class="post-category-text"><a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></div>
 		</div>
 		</section>
 		<section class="preview-post-home">
 		{{ article.summary }}
 		<div class="readmore-post-home"><a href="{{ SITEURL }}/{{ article.url }}">➞ Read more</a></div>
-		</section>
+	</section>
 </article>
+{% if ((loop.index % DEFAULT_PAGINATION) != 0) and (not loop.last) %}
+<hr class="divider" />
+{% endif %}
 {% endfor %}
-<article class="post-home">
 	{% include 'pagination.html' %}
-</article>
 {% endblock content %}

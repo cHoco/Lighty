@@ -7,8 +7,9 @@
 		<title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
 		<meta name="description" content="IT engineering student, tecnology lover, wannabe designer">
 		<link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/main.css" />
+		<link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/pygments.css" />
 		<script src="{{ SITEURL }}/theme/scripts/lazy-retina.min.js"></script>
-		<script src="{{ SITEURL }}/them/scripts/modernizr.js"></script>
+		<script src="{{ SITEURL }}/theme/scripts/modernizr.js"></script>
 		<link rel="alternate" type="application/atom+xml"
 			title="{{ SITENAME }} — Atom Feed"
 			href="{{ SITEURL }}/{{ FEED }}" /> 
@@ -23,6 +24,8 @@
 <body>
 <div class="wrapper">
 	<section>
+		{% block infocontent %}
+		{% endblock %}
 		{% block content %}
 		{% endblock %}
 	</section>
@@ -35,8 +38,8 @@
 		<p>{{ AUTHOR_SHORT_DESCRIPTION }}</p>
 		</div>
 		<ul>
-		{% for page in PAGES %}
-			<li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+		{% for link in LINKS %}
+			<a href="{{ SITEURL }}/{{ link.url }}"><li>{{ link.title }}</li></a>
 		{% endfor %}
 		</ul>
 		<hr />

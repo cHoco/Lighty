@@ -1,14 +1,54 @@
 {% if DEFAULT_PAGINATION %}
-<div class="paginator">
-	{% if articles_page.has_previous() %}
+<section id="pagination">
+	{% if articles_page.has_previous() and not articles_page.has_next() %}
+	<div id="pagination-first-last">
 		{% if articles_page.previous_page_number() == 1 %}
-			<a href="{{ SITEURL }}/{{ page_name }}.html" class="button_accent">&larr;&nbsp;&nbsp;&nbsp;newer</a>
+			{% if page_name == 'index' %}
+				<a href="{{ SITEURL }}">&larr;&nbsp;&nbsp;&nbsp;Newer</a>
+			{% else %}
+				<a href="{{ SITEURL }}/{{ page_name }}">&larr;&nbsp;&nbsp;&nbsp;Newer</a>
+			{% endif %}
 		{% else %}
-			<a href="{{ SITEURL }}/{{ page_name }}{{ articles_page.previous_page_number() }}.html" class="button_accent">&larr;&nbsp;&nbsp;&nbsp;newer</a>
+			{% if page_name == 'index' %}
+			<a href="{{ SITEURL }}/page/{{ articles_page.previous_page_number() }}">&larr;&nbsp;&nbsp;&nbsp;Newer</a>
+			{% else %}
+			<a href="{{ SITEURL }}/{{ page_name }}/{{ articles_page.previous_page_number() }}">&larr;&nbsp;&nbsp;&nbsp;Newer</a>
+			{% endif %}
 		{% endif %}
+	</div>
 	{% endif %}
-	{% if articles_page.has_next() %}
-		<a href="{{ SITEURL }}/{{ page_name }}{{ articles_page.next_page_number() }}.html" class="button_accent">continue&nbsp;&nbsp;&nbsp;&rarr;</a>
+	{% if articles_page.has_previous() and articles_page.has_next() %}
+	<div id="pagination-newer">
+		{% if articles_page.previous_page_number() == 1 %}
+			{% if page_name == 'index' %}
+				<a href="{{ SITEURL }}">&larr;&nbsp;&nbsp;&nbsp;Newer</a>
+			{% else %}
+				<a href="{{ SITEURL }}/{{ page_name }}">&larr;&nbsp;&nbsp;&nbsp;Newer</a>
+			{% endif %}
+		{% else %}
+			{% if page_name == 'index' %}
+			<a href="{{ SITEURL }}/page/{{ articles_page.previous_page_number() }}">&larr;&nbsp;&nbsp;&nbsp;Newer</a>
+			{% else %}
+			<a href="{{ SITEURL }}/{{ page_name }}/{{ articles_page.previous_page_number() }}">&larr;&nbsp;&nbsp;&nbsp;Newer</a>
+			{% endif %}
+		{% endif %}
+	</div>
+	◆
+	<div id="pagination-older">
+		{% if page_name == 'index' %}
+		<a href="{{ SITEURL }}/page/{{ articles_page.next_page_number() }}">Older&nbsp;&nbsp;&nbsp;&rarr;</a>
+		{% else %}
+		<a href="{{ SITEURL }}/{{ page_name }}/{{ articles_page.next_page_number() }}">Older&nbsp;&nbsp;&nbsp;&rarr;</a>
+		{% endif %}
+	</div>
 	{% endif %}
-</div>
+	{% if not articles_page.has_previous() and articles_page.has_next() %}
+	<div id="pagination-first-last">
+		{% if page_name == 'index' %}
+		<a href="{{ SITEURL }}/page/{{ articles_page.next_page_number() }}">Older&nbsp;&nbsp;&nbsp;&rarr;</a>
+		{% else %}
+		<a href="{{ SITEURL }}/{{ page_name }}/{{ articles_page.next_page_number() }}">Older&nbsp;&nbsp;&nbsp;&rarr;</a>
+		{% endif %}	</div>
+	{% endif %}
+</section>
 {% endif %}

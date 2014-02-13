@@ -1,7 +1,5 @@
 {% extends "index.html" %}
-{% block title %}{{ SITENAME }} &mdash; Articles in Category {{ category|striptags }}{% endblock %}
-{% block content_title %}
-<div class="page-title">
-	<h2>Filed under <span>{{ category }}</span> &hellip;</h2>
-</div>
+{% block title %}{{ SITENAME }} &mdash; Articles about {{ category|striptags }}{% endblock %}
+{% block infocontent %}
+<div class="info-category"><h1>Articles about <span><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a></span> :</h1></div>
 {% endblock %}

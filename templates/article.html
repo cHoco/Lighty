@@ -24,9 +24,10 @@
 <div class="post-content">
 {{ article.content }}
 </div>
+{% if DISQUS_SITENAME %}
 <div id="disqus_thread"></div>
 <script type="text/javascript">
-	var disqus_shortname = 'chocome';
+	var disqus_shortname = '{{DISQUS_SITENAME}}';
 	(function () {
 	    var s = document.createElement('script'); s.async = true;
 	    s.type = 'text/javascript';
@@ -41,7 +42,7 @@
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
+{% endif %}
 </article>
 {% endblock content %}
         
